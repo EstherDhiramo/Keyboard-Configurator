@@ -1,0 +1,241 @@
+body {
+    background: #c9f5f3 !important;
+    overflow-y: hidden;
+  }
+  
+  .header--configurator .logo {
+    width: 150px;
+    position: static;
+    transform: unset;
+  }
+  .header--configurator {
+    padding: 40px 20px;
+    justify-content: space-between;
+  }
+  
+  .config-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: calc(100vh - 200px);
+    margin: auto;
+    max-width: 1161px;
+    padding: 0 20px;
+  }
+  
+  .config-container span {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 23px;
+    color: black;
+  }
+  
+  .options {
+    padding: 30px;
+    background: floralwhite;
+    align-self: flex-start;
+    border-radius: 10px;
+  }
+  
+  .keyboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+  }
+  
+  .option img {
+    max-width: 131px;
+    max-height: 52px;
+    margin-bottom: 10px;
+  }
+  
+  .option-container {
+    display: flex;
+    margin-bottom: 22px;
+    justify-content: flex-start;
+    max-width: 700px;
+  }
+  
+  .option-container:last-child {
+    margin-bottom: 0px;
+  }
+  
+  .option-item {
+    padding: 12px;
+    border: 3px solid transparent;
+    margin-right: 14px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .option-item:last-child {
+    margin-right: 0px;
+  }
+  .option-item:hover,
+  .option-item.active {
+    border: 3px solid #b7e6e4;
+  }
+  
+  .option-item.focused {
+    border: 3px solid rgb(22, 142, 255);
+  }
+  
+  .option-item h3 {
+    font-family: var(--primary-font);
+    font-size: 16px;
+    color: dimgray;
+  }
+  h4 {
+    font-family: var(--primary-font);
+    font-size: 12px;
+    font-weight: 300;
+    max-width: 100px;
+  }
+  
+  .subheading {
+    display: block;
+    padding-bottom: 14px;
+    color: black;
+  }
+  
+  svg#keyboard {
+    display: block;
+    height: auto;
+    width: 35vw;
+    max-width: 500px;
+    margin-right: 5vw;
+    margin-bottom: 100px;
+  }
+  
+  svg#keyboard g:not(.shadow, .keycaps):hover {
+    filter: contrast(0.5);
+    cursor: pointer;
+  }
+  
+  g.focused {
+    stroke-width: 3px;
+    stroke: rgb(22, 142, 255);
+  }
+  
+  .shadow {
+    pointer-events: none;
+  }
+  
+  .color-picker {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    margin: 20px;
+  }
+  .color {
+    --color: black;
+    width: 60px;
+    height: 60px;
+    border: 5px solid var(--color);
+    background: var(--color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-right: 5px;
+  }
+  
+  .color:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+  }
+  
+  .color.active {
+    border: 3px solid black;
+    transform: scale(1.1);
+  }
+  
+  .selectedFeatures {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 30px;
+  }
+  
+  .selectedFeature img {
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  .wave {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    bottom: 0px;
+    width: 100vw;
+    left: 0;
+    pointer-events: none;
+  }
+  .wave path {
+    fill: #b7e6e4;
+  }
+  @media only screen and (max-width: 900px) {
+    .option-container {
+      flex-wrap: wrap;
+    }
+    .option-item {
+      max-width: 100px;
+    }
+    .option-item h3 {
+      font-size: 14px;
+    }
+    .option-item img {
+      max-width: 40px;
+      max-height: 40px;
+    }
+    .config-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: unset;
+    }
+    .options {
+      align-self: unset;
+      width: 100%;
+    }
+    .keyboard {
+      height: 340px;
+    }
+    svg#keyboard {
+      margin: 0;
+      width: 260px;
+    }
+    .wave {
+      display: none;
+    }
+    body {
+      overflow-y: auto;
+    }
+    .selectedFeature img {
+      height: 40px;
+      margin-right: 15px;
+    }
+    .color {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  
+  @media only screen and (max-width: 570px) {
+    .header--configurator {
+      justify-content: center;
+      flex-wrap: wrap-reverse;
+    }
+    .logo {
+      padding-bottom: 20px;
+      width: 190px;
+    }
+  }

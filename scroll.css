@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+
+:root {
+  --primary-font: "Source Code Pro", monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--primary-font);
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+/* /////////// HEADER //////////////// */
+.wrapper {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 60px 20px;
+  justify-content: space-between;
+}
+.logo {
+  width: 190px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding-right: 20px;
+  font-family: var(--primary-font);
+  font-weight: 700;
+}
+
+/*/////////////       SECTIONS ONE-FIVE        //////////////// */
+#section-one {
+  background: white;
+  /* background-color: #b6ffcd; */
+  background-size: cover;
+}
+#section-two {
+  background-color: #e4d9fe;
+}
+#section-three {
+  background-color: white;
+}
+#section-four {
+  background: lightcyan;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#section-five {
+  background: white;
+  height: 100vh;
+}
+main {
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding: 30px;
+  min-height: 50vh;
+}
+
+/* //////////// HERO SECTION ///////// */
+
+#cooltext {
+  font-family: var(--primary-font);
+  max-width: 600px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-size: 45px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero a {
+  margin-top: 20px;
+  background: black;
+  border: none;
+  padding: 15px 25px;
+  color: white;
+  font-family: var(--primary-font);
+  text-decoration: none;
+}
+
+/* /////////// MECHANICAL SWITCHES ////////////*/
+.mechanical-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: white;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.section-heading {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.section-desc {
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 500px;
+}
+/* /////////// RBG BACKLIGHT ////////////*/
+
+.rgb-backlight {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #ffffba;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* /////////// ADDITIONAL FEATURES SECTION ////////////*/
+
+#section-four .section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.additional-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.additional-features .feature {
+  margin: 0 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.additional-features .feature img {
+  margin-bottom: 20px;
+  height: 100px;
+}
+/* /////////// FOOTER SECTION ////////////*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 100px;
+}
+
+.copyright {
+  margin-bottom: -100px;
+}
+footer ul {
+  font-family: var(--primary-font);
+  list-style: none;
+  margin-right: 200px;
+}
+footer ul li {
+  line-height: 30px;
+  font-size: 18px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+/* //////// Text fading in from bottom /////////*/
+.letter {
+  display: inline-block;
+}
+.fade-in-bottom {
+  --letter: 0s;
+  animation-name: fade-in-bottom;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0, 0.93, 0.91, 1.42);
+  animation-delay: calc(var(--letter) * 0.02s);
+  animation-fill-mode: both;
+}
+@keyframes fade-in-bottom {
+  0% {
+    transform: translate(100px, 20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, -8px);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+/* .cards-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.card {
+  margin: 0 3vw;
+  width: 25vw;
+  flex-shrink: 0;
+  padding: 2vw;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.card-title {
+  transition: 0.3s;
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  margin: 2vw 0 0;
+  font-size: 2.8vw;
+  opacity: 0;
+  transform: scale(0.7);
+}
+.card:last-child:after {
+  content: "";
+  width: 6vw;
+  position: absolute;
+  height: 100%;
+  right: -6vw;
+  top: 0;
+}
+.card img {
+  max-width: 70%;
+  max-height: 50vh;
+  opacity: 0;
+  margin: auto;
+  display: block;
+  transition: 0.35s;
+  transform: rotate(6deg) translate(0, 40px) scaleY(0.6);
+}
+.card.isVisible img {
+  max-width: 100%;
+  opacity: 1;
+  transform: none;
+}
+.card.isVisible .card-title {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.1s;
+}
+.card:first-child {
+  margin-left: 6vw;
+} */
+/*///////////////////     Media queries     ////////////////////////*/
+
+@media only screen and (max-width: 570px) {
+  header {
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+  }
+  .logo {
+    padding-bottom: 20px;
+    width: 190px;
+  }
+  body #cooltext {
+    max-width: 400px;
+    font-size: 27px;
+  }
+  .mechanical-switch {
+    flex-wrap: wrap;
+  }
+  .mechanical-switch img {
+    width: 400px;
+  }
+  .rgb-backlight {
+    flex-wrap: wrap-reverse;
+  }
+  .rgb-backlight img {
+    width: 400px;
+  }
+  .additional-features {
+    flex-wrap: wrap;
+  }
+  footer {
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.faster,
+.slower {
+  z-index: -1;
+  position: absolute;
+  left: 80px;
+  top: 100px;
+  transform: rotate(320deg);
+  width: 400px;
+}
+
+.faster {
+  right: 0;
+  top: 300px;
+  left: unset;
+}
