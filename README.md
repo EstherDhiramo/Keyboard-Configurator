@@ -1,1 +1,1 @@
-# Keyboard-Configurator
+KEYBOARD CONFIGURATOR
